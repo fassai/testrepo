@@ -26,9 +26,9 @@ Created by Fasai Puengudom.
 # Row A
 st.markdown('### Metrics')
 col1, col2, col3 = st.columns(3)
-col1.metric("Online Revenue", "700,000 THB", "12 %")
-col2.metric("Offline Revenue", "300,000 THB", "")
-col3.metric("ROAS", "4:1", "")
+col1.metric("Online Revenue", "14,700,000 THB", "12 %")
+col2.metric("Offline Revenue", "36,300,000 THB", "40 %")
+col3.metric("ROAS", "4:1", "+5%")
 
 # Row B
 seattle_weather = pd.read_csv('https://raw.githubusercontent.com/tvst/plost/master/data/seattle-weather.csv', parse_dates=['date'])
