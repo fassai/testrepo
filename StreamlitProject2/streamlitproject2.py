@@ -50,3 +50,5 @@ with c2:
         color='company',
         legend='bottom', 
         use_container_width=True)
+    
+    #ok
