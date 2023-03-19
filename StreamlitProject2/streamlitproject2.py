@@ -6,7 +6,7 @@ st.set_page_config(layout='wide', initial_sidebar_state='expanded')
 
 # Markdown 
 st.title("Warrix Health Sale & Marketing Dashboard")
-st.markdown("By Fasai")
+st.markdown("For internal use only")
 
 st.sidebar.header('Dashboard `version 2`')
 
@@ -19,7 +19,7 @@ plot_height = st.sidebar.slider('Specify plot height', 200, 500, 500)
 
 st.sidebar.markdown('''
 ---
-Created with ❤️ by [Data Professor](https://youtube.com/dataprofessor/).
+Created by Fasai Puengudom.
 ''')
 
 
