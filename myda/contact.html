@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inquire — MYDA Studio</title>
+  <meta name="description" content="Sign up or inquire about MYDA Studio's dance programs. Tell us about your child and we'll match them with the right teacher and class." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand">MYDA<span class="brand__dot"></span>STUDIO</a>
+      <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+        <span class="hamburger__bars"></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="drawer" class="drawer" aria-hidden="true" role="dialog" aria-label="Site menu">
+    <div class="drawer__top">
+      <span class="brand" style="color:#fff">MYDA<span class="brand__dot" style="background:#fff"></span>STUDIO</span>
+      <button id="menuClose" class="drawer__close" aria-label="Close menu">×</button>
+    </div>
+    <nav class="drawer__nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="partners.html">Partners</a>
+      <a href="contact.html">Inquire</a>
+    </nav>
+    <div class="drawer__foot">
+      <span>MYDA Studio · Bangkok</span>
+      <span>© <span id="year2"></span> MYDA Studio</span>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__intro">
+        <span class="eyebrow">Inquire · Sign up</span>
+        <h1 class="display" style="max-width:14ch">Let's talk about your dancer.</h1>
+        <p class="hero__sub">Fill in the form and we'll get back to you within 24 hours with class options, schedules, and an honest recommendation.</p>
+      </div>
+
+      <div id="inquire" style="display:grid;gap:48px;grid-template-columns:1fr;align-items:start;">
+        <form class="form" onsubmit="event.preventDefault(); document.getElementById('formNote').hidden=false;">
+          <div class="field--row">
+            <div class="field">
+              <label for="parent">Parent / guardian name</label>
+              <input id="parent" name="parent" type="text" required placeholder="Your full name" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone / LINE</label>
+              <input id="phone" name="phone" type="text" required placeholder="08x-xxx-xxxx" />
+            </div>
+          </div>
+
+          <div class="field--row">
+            <div class="field">
+              <label for="child">Child's name</label>
+              <input id="child" name="child" type="text" placeholder="Optional" />
+            </div>
+            <div class="field">
+              <label for="age">Child's age</label>
+              <input id="age" name="age" type="number" min="3" max="25" placeholder="e.g. 9" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="goal">What's the goal?</label>
+            <select id="goal" name="goal">
+              <option>For fun and confidence</option>
+              <option>Serious training — competition track</option>
+              <option>Pro-track — preparing for label / artist development</option>
+              <option>Not sure yet — please advise</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Tell us about your dancer</label>
+            <textarea id="message" name="message" placeholder="Their level, what they love, what you're hoping for..."></textarea>
+          </div>
+
+          <div class="btn-row" style="margin-top:8px">
+            <button type="submit" class="btn btn--dark">Send inquiry</button>
+            <a href="#" class="btn btn--outline">Add me on LINE instead</a>
+          </div>
+
+          <p id="formNote" hidden style="margin-top:18px;padding:14px 16px;border:1px solid var(--ink);background:#fff;font-size:14px">
+            Thank you — your inquiry has been received. We'll reply within 24 hours. <em>(Form delivery endpoint pending — to be wired during deployment.)</em>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct contact -->
+  <section class="section--ink">
+    <div class="container">
+      <div style="display:grid;gap:32px;grid-template-columns:1fr;max-width:60ch">
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Or reach us directly</span>
+        <h2 style="color:#fff">We answer fast — usually within hours.</h2>
+        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;color:rgba(255,255,255,0.85);font-size:18px">
+          <li><strong>Phone</strong> · [number pending]</li>
+          <li><strong>LINE</strong> · [@handle pending]</li>
+          <li><strong>Email</strong> · [pending]</li>
+          <li><strong>Studio</strong> · [address pending]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__top">
+        <div>
+          <div class="site-footer__brand">MYDA · STUDIO</div>
+          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">Premium dance training built around real students and real outcomes — from first class to international stage.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="contact.html">Inquire</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>[Phone · pending]</li>
+            <li>[LINE · pending]</li>
+            <li>[Email · pending]</li>
+            <li>[Address · pending]</li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© <span id="year"></span> MYDA Studio. All rights reserved.</span>
+        <span>Bangkok · Thailand</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year2").textContent = new Date().getFullYear();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
