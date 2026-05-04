@@ -23,12 +23,48 @@ html, body {
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", "Noto Sans Thai", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
   line-height: 1.55;
 }
 
 body { overflow-x: hidden; }
+
+/* ---------- Language toggle (i18n) ----------
+   Each translatable string is duplicated as siblings:
+     <span lang="en">English</span><span lang="th">ไทย</span>
+   The active language on <html lang="..."> shows; the other hides. */
+html[lang="en"] [lang="th"]:not(.lang-toggle__opt):not(.no-i18n) { display: none; }
+html[lang="th"] [lang="en"]:not(.lang-toggle__opt):not(.no-i18n) { display: none; }
+
+.lang-toggle {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  height: 48px;
+  padding: 0 14px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.lang-toggle:hover { background: var(--ink); color: var(--paper); }
+.lang-toggle__opt { transition: opacity 0.15s ease; }
+.lang-toggle__sep { opacity: 0.35; font-weight: 400; }
+html[lang="en"] .lang-toggle__opt[data-lang="th"] { opacity: 0.35; }
+html[lang="th"] .lang-toggle__opt[data-lang="en"] { opacity: 0.35; }
+
+/* When Thai is active, give Thai script a hair more line-height */
+html[lang="th"] body { line-height: 1.6; }
+html[lang="th"] h1,
+html[lang="th"] h2,
+html[lang="th"] h3 { line-height: 1.05; }
 
 a { color: inherit; text-decoration: none; }
 a:hover { opacity: 0.7; }
@@ -45,7 +81,7 @@ img { max-width: 100%; display: block; }
 /* ---------- Typography ---------- */
 .display,
 h1, h2, h3 {
-  font-family: "Archivo Black", "Inter", "Helvetica Neue", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", "Inter", "Helvetica Neue", sans-serif;
   font-weight: 900;
   letter-spacing: -0.02em;
   line-height: 0.95;
@@ -87,7 +123,7 @@ p { margin: 0 0 1em; }
 }
 
 .brand {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: 22px;
   letter-spacing: 0.02em;
   display: inline-flex;
@@ -173,7 +209,7 @@ p { margin: 0 0 1em; }
   gap: 12px;
 }
 .drawer__nav a {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: clamp(40px, 7vw, 88px);
   letter-spacing: -0.02em;
   line-height: 1;
@@ -245,7 +281,7 @@ section { padding: clamp(56px, 9vw, 140px) 0; }
   overflow: hidden;
 }
 .stat__num {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: clamp(48px, 11vw, 132px);
   line-height: 0.85;
   letter-spacing: -0.04em;
@@ -366,7 +402,7 @@ section { padding: clamp(56px, 9vw, 140px) 0; }
   gap: 14px;
 }
 .card__title {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: clamp(22px, 2vw, 28px);
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -460,12 +496,12 @@ section { padding: clamp(56px, 9vw, 140px) 0; }
 }
 .roster__row:hover { padding-left: 8px; }
 .roster__num {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: 18px;
   color: var(--muted);
 }
 .roster__name {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: clamp(20px, 2.2vw, 28px);
   letter-spacing: -0.01em;
   line-height: 1.05;
@@ -515,7 +551,7 @@ section { padding: clamp(56px, 9vw, 140px) 0; }
   color: rgba(255,255,255,0.55);
   letter-spacing: 0.04em;
 }
-.site-footer__brand { font-family: "Archivo Black", sans-serif; font-size: 28px; letter-spacing: 0.02em; }
+.site-footer__brand { font-family: "Archivo Black", "Noto Sans Thai", sans-serif; font-size: 28px; letter-spacing: 0.02em; }
 
 /* ---------- Profile page ---------- */
 .profile-hero {
@@ -543,12 +579,12 @@ section { padding: clamp(56px, 9vw, 140px) 0; }
 }
 .cred > * { min-width: 0; }
 .cred__year {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: 18px;
   color: var(--ink);
 }
 .cred__title {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: clamp(18px, 1.8vw, 22px);
   letter-spacing: -0.01em;
 }
@@ -569,7 +605,7 @@ section { padding: clamp(56px, 9vw, 140px) 0; }
   border-bottom: 1px solid var(--ink);
 }
 .partner-tier__title {
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: clamp(22px, 2.4vw, 32px);
   letter-spacing: -0.01em;
 }
@@ -592,7 +628,7 @@ section { padding: clamp(56px, 9vw, 140px) 0; }
   justify-content: center;
   text-align: center;
   padding: 24px;
-  font-family: "Archivo Black", sans-serif;
+  font-family: "Archivo Black", "Noto Sans Thai", sans-serif;
   font-size: clamp(18px, 2vw, 28px);
   letter-spacing: 0.02em;
   position: relative;

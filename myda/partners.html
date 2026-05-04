@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en"
+      data-title-en="Partners — MYDA Studio"
+      data-title-th="พาร์ทเนอร์ — MYDA Studio">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +9,7 @@
   <meta name="description" content="MYDA Studio's partner network — Grammy, Mono, AHI Studio, and the institutions trusted by Thailand's top creative families." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&family=Noto+Sans+Thai:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -15,9 +17,16 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a href="index.html" class="brand">MYDA<span class="brand__dot"></span>STUDIO</a>
-      <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
-        <span class="hamburger__bars"></span>
-      </button>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="lang-toggle" data-toggle-lang aria-label="Toggle language" aria-pressed="false">
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="th">TH</span>
+        </button>
+        <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+          <span class="hamburger__bars"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -27,13 +36,13 @@
       <button id="menuClose" class="drawer__close" aria-label="Close menu">×</button>
     </div>
     <nav class="drawer__nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="profile.html">Profile</a>
-      <a href="partners.html">Partners</a>
-      <a href="contact.html">Inquire</a>
+      <a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a>
+      <a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a>
+      <a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a>
+      <a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a>
     </nav>
     <div class="drawer__foot">
-      <span>MYDA Studio · Bangkok</span>
+      <span><span lang="en">MYDA Studio · Bangkok</span><span lang="th">MYDA Studio · กรุงเทพฯ</span></span>
       <span>© <span id="year2"></span> MYDA Studio</span>
     </div>
   </div>
@@ -42,9 +51,18 @@
   <section class="hero">
     <div class="container">
       <div class="hero__intro">
-        <span class="eyebrow">Partners · Trust signals</span>
-        <h1 class="display" style="max-width:14ch">Trusted by the labels and studios that shape the industry.</h1>
-        <p class="hero__sub">A working partner network behind every MYDA student — from major labels to the country's most respected dance institutions.</p>
+        <span class="eyebrow">
+          <span lang="en">Partners · Trust signals</span>
+          <span lang="th">พาร์ทเนอร์ · ตัวบ่งชี้ความน่าเชื่อถือ</span>
+        </span>
+        <h1 class="display" style="max-width:14ch">
+          <span lang="en">Trusted by the labels and studios that shape the industry.</span>
+          <span lang="th">ได้รับความไว้วางใจจากค่ายและสตูดิโอ ที่กำหนดทิศทางวงการ</span>
+        </h1>
+        <p class="hero__sub">
+          <span lang="en">A working partner network behind every MYDA student — from major labels to the country's most respected dance institutions.</span>
+          <span lang="th">เครือข่ายพาร์ทเนอร์ที่ทำงานอยู่เบื้องหลังนักเรียน MYDA ทุกคน — ตั้งแต่ค่ายเพลงใหญ่จนถึงสถาบันเต้นที่ได้รับความเคารพที่สุดในประเทศ</span>
+        </p>
       </div>
     </div>
   </section>
@@ -54,60 +72,87 @@
     <div class="container">
       <div class="partner-tier">
         <div class="partner-tier__head">
-          <h2 class="partner-tier__title">Headline Partners</h2>
+          <h2 class="partner-tier__title">
+            <span lang="en">Headline Partners</span>
+            <span lang="th">พาร์ทเนอร์หลัก</span>
+          </h2>
           <span class="eyebrow">Tier 01</span>
         </div>
         <div class="logo-grid logo-grid--big">
           <div class="logo-cell logo-cell--big">
             GRAMMY
-            <span class="logo-cell__note">Logo file pending — supplied by client</span>
+            <span class="logo-cell__note">
+              <span lang="en">Logo file pending — supplied by client</span>
+              <span lang="th">ไฟล์โลโก้รอลูกค้า</span>
+            </span>
           </div>
           <div class="logo-cell logo-cell--big">
             MONO
-            <span class="logo-cell__note">Logo file pending — supplied by client</span>
+            <span class="logo-cell__note">
+              <span lang="en">Logo file pending — supplied by client</span>
+              <span lang="th">ไฟล์โลโก้รอลูกค้า</span>
+            </span>
           </div>
         </div>
       </div>
 
       <div class="partner-tier">
         <div class="partner-tier__head">
-          <h2 class="partner-tier__title">Studio Partners</h2>
+          <h2 class="partner-tier__title">
+            <span lang="en">Studio Partners</span>
+            <span lang="th">สตูดิโอพาร์ทเนอร์</span>
+          </h2>
           <span class="eyebrow">Tier 02</span>
         </div>
         <div class="logo-grid">
           <div class="logo-cell">
             AHI STUDIO
-            <span class="logo-cell__note">Logo pending</span>
+            <span class="logo-cell__note">
+              <span lang="en">Logo pending</span>
+              <span lang="th">รอโลโก้</span>
+            </span>
           </div>
           <div class="logo-cell">
             [PARTNER 4]
-            <span class="logo-cell__note">Name + logo pending</span>
+            <span class="logo-cell__note">
+              <span lang="en">Name + logo pending</span>
+              <span lang="th">รอชื่อและโลโก้</span>
+            </span>
           </div>
           <div class="logo-cell">
             [PARTNER 5]
-            <span class="logo-cell__note">Name + logo pending</span>
+            <span class="logo-cell__note">
+              <span lang="en">Name + logo pending</span>
+              <span lang="th">รอชื่อและโลโก้</span>
+            </span>
           </div>
           <div class="logo-cell">
             [PARTNER 6]
-            <span class="logo-cell__note">Name + logo pending</span>
+            <span class="logo-cell__note">
+              <span lang="en">Name + logo pending</span>
+              <span lang="th">รอชื่อและโลโก้</span>
+            </span>
           </div>
         </div>
       </div>
 
       <div class="partner-tier">
         <div class="partner-tier__head">
-          <h2 class="partner-tier__title">Network & Affiliates</h2>
+          <h2 class="partner-tier__title">
+            <span lang="en">Network & Affiliates</span>
+            <span lang="th">เครือข่ายและพันธมิตร</span>
+          </h2>
           <span class="eyebrow">Tier 03</span>
         </div>
         <div class="logo-grid">
-          <div class="logo-cell">[PARTNER 7]<span class="logo-cell__note">Pending</span></div>
-          <div class="logo-cell">[PARTNER 8]<span class="logo-cell__note">Pending</span></div>
-          <div class="logo-cell">[PARTNER 9]<span class="logo-cell__note">Pending</span></div>
-          <div class="logo-cell">[PARTNER 10]<span class="logo-cell__note">Pending</span></div>
-          <div class="logo-cell">[PARTNER 11]<span class="logo-cell__note">Pending</span></div>
-          <div class="logo-cell">[PARTNER 12]<span class="logo-cell__note">Pending</span></div>
-          <div class="logo-cell">[PARTNER 13]<span class="logo-cell__note">Pending</span></div>
-          <div class="logo-cell">[PARTNER 14]<span class="logo-cell__note">Pending</span></div>
+          <div class="logo-cell">[PARTNER 7]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
+          <div class="logo-cell">[PARTNER 8]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
+          <div class="logo-cell">[PARTNER 9]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
+          <div class="logo-cell">[PARTNER 10]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
+          <div class="logo-cell">[PARTNER 11]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
+          <div class="logo-cell">[PARTNER 12]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
+          <div class="logo-cell">[PARTNER 13]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
+          <div class="logo-cell">[PARTNER 14]<span class="logo-cell__note"><span lang="en">Pending</span><span lang="th">รอข้อมูล</span></span></div>
         </div>
       </div>
     </div>
@@ -117,11 +162,23 @@
   <section class="section--ink">
     <div class="container">
       <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;max-width:60ch">
-        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Build with us</span>
-        <h2 style="color:#fff">Looking to partner with MYDA Studio?</h2>
-        <p style="color:rgba(255,255,255,0.78);font-size:18px">Labels, agencies, schools, and event organizers — we're open to working with teams who share our standards.</p>
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">
+          <span lang="en">Build with us</span>
+          <span lang="th">ร่วมงานกับเรา</span>
+        </span>
+        <h2 style="color:#fff">
+          <span lang="en">Looking to partner with MYDA Studio?</span>
+          <span lang="th">สนใจเป็นพาร์ทเนอร์กับ MYDA Studio?</span>
+        </h2>
+        <p style="color:rgba(255,255,255,0.78);font-size:18px">
+          <span lang="en">Labels, agencies, schools, and event organizers — we're open to working with teams who share our standards.</span>
+          <span lang="th">ค่ายเพลง เอเจนซี่ โรงเรียน และผู้จัดงาน — เราเปิดรับทีมที่มีมาตรฐานแบบเดียวกับเรา</span>
+        </p>
         <div class="btn-row">
-          <a href="contact.html" class="btn btn--primary">Get in touch</a>
+          <a href="contact.html" class="btn btn--primary">
+            <span lang="en">Get in touch</span>
+            <span lang="th">ติดต่อเรา</span>
+          </a>
         </div>
       </div>
     </div>
@@ -133,37 +190,48 @@
       <div class="site-footer__top">
         <div>
           <div class="site-footer__brand">MYDA · STUDIO</div>
-          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">Premium dance training built around real students and real outcomes — from first class to international stage.</p>
+          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">
+            <span lang="en">Premium dance training built around real students and real outcomes — from first class to international stage.</span>
+            <span lang="th">การฝึกเต้นพรีเมียมที่สร้างจากนักเรียนจริงและผลลัพธ์จริง — ตั้งแต่คลาสแรกจนถึงเวทีระดับโลก</span>
+          </p>
         </div>
         <div>
-          <h4>Pages</h4>
+          <h4><span lang="en">Pages</span><span lang="th">หน้าทั้งหมด</span></h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact.html">Inquire</a></li>
+            <li><a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a></li>
+            <li><a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a></li>
+            <li><a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a></li>
+            <li><a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4><span lang="en">Contact</span><span lang="th">ติดต่อ</span></h4>
           <ul>
-            <li>[Phone · pending]</li>
-            <li>[LINE · pending]</li>
-            <li>[Email · pending]</li>
-            <li>[Address · pending]</li>
+            <li><span lang="en">[Phone · pending]</span><span lang="th">[เบอร์โทร · รอข้อมูล]</span></li>
+            <li><span lang="en">[LINE · pending]</span><span lang="th">[LINE · รอข้อมูล]</span></li>
+            <li><span lang="en">[Email · pending]</span><span lang="th">[อีเมล · รอข้อมูล]</span></li>
+            <li><span lang="en">[Address · pending]</span><span lang="th">[ที่อยู่ · รอข้อมูล]</span></li>
           </ul>
         </div>
       </div>
       <div class="site-footer__bottom">
-        <span>© <span id="year"></span> MYDA Studio. All rights reserved.</span>
-        <span>Bangkok · Thailand</span>
+        <span>
+          <span lang="en">© <span id="year"></span> MYDA Studio. All rights reserved.</span>
+          <span lang="th">© <span id="yearTh"></span> MYDA Studio สงวนลิขสิทธิ์</span>
+        </span>
+        <span>
+          <span lang="en">Bangkok · Thailand</span>
+          <span lang="th">กรุงเทพฯ · ประเทศไทย</span>
+        </span>
       </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("year2").textContent = new Date().getFullYear();
+    var y = new Date().getFullYear();
+    document.getElementById("year").textContent = y;
+    document.getElementById("year2").textContent = y;
+    var yth = document.getElementById("yearTh"); if (yth) yth.textContent = y;
   </script>
   <script src="js/main.js"></script>
 </body>

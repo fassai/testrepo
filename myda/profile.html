@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en"
+      data-title-en="Profile — MYDA Studio"
+      data-title-th="โปรไฟล์ — MYDA Studio">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +9,7 @@
   <meta name="description" content="Meet สายเมฆ พึ่งอุดม — founder and head instructor of MYDA Studio. Years of teaching, credentials, and the philosophy behind a world-class family dance academy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&family=Noto+Sans+Thai:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -15,9 +17,16 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a href="index.html" class="brand">MYDA<span class="brand__dot"></span>STUDIO</a>
-      <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
-        <span class="hamburger__bars"></span>
-      </button>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="lang-toggle" data-toggle-lang aria-label="Toggle language" aria-pressed="false">
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="th">TH</span>
+        </button>
+        <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+          <span class="hamburger__bars"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -27,13 +36,13 @@
       <button id="menuClose" class="drawer__close" aria-label="Close menu">×</button>
     </div>
     <nav class="drawer__nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="profile.html">Profile</a>
-      <a href="partners.html">Partners</a>
-      <a href="contact.html">Inquire</a>
+      <a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a>
+      <a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a>
+      <a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a>
+      <a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a>
     </nav>
     <div class="drawer__foot">
-      <span>MYDA Studio · Bangkok</span>
+      <span><span lang="en">MYDA Studio · Bangkok</span><span lang="th">MYDA Studio · กรุงเทพฯ</span></span>
       <span>© <span id="year2"></span> MYDA Studio</span>
     </div>
   </div>
@@ -43,18 +52,33 @@
     <div class="container">
       <div class="profile-hero">
         <div style="display:flex;flex-direction:column;gap:22px">
-          <span class="eyebrow">Profile · Founder & Head Instructor</span>
+          <span class="eyebrow">
+            <span lang="en">Profile · Founder & Head Instructor</span>
+            <span lang="th">โปรไฟล์ · ผู้ก่อตั้งและครูใหญ่</span>
+          </span>
           <h1 class="display">สายเมฆ<br/>พึ่งอุดม</h1>
-          <p class="lead text-muted">[Bio copy pending from client] — Founder of MYDA Studio. A career built on training dancers who go on to perform, sign, and compete on the world's biggest stages, while keeping the studio's heart bright, warm, and family-first.</p>
+          <p class="lead text-muted">
+            <span lang="en">[Bio copy pending from client] — Founder of MYDA Studio. A career built on training dancers who go on to perform, sign, and compete on the world's biggest stages, while keeping the studio's heart bright, warm, and family-first.</span>
+            <span lang="th">[ประวัติรอข้อมูลจากลูกค้า] — ผู้ก่อตั้ง MYDA Studio อาชีพที่สร้างจากการฝึกนักเต้นที่ก้าวต่อไปสู่การแสดง เซ็นสัญญา และแข่งขันบนเวทีระดับโลก ในขณะที่ยังรักษาหัวใจของสตูดิโอให้สดใส อบอุ่น และให้ความสำคัญกับครอบครัวเป็นอันดับแรก</span>
+          </p>
           <div class="btn-row">
-            <a href="contact.html" class="btn btn--outline">Book a class</a>
-            <a href="index.html#portfolio" class="btn btn--outline">See student outcomes</a>
+            <a href="contact.html" class="btn btn--outline">
+              <span lang="en">Book a class</span>
+              <span lang="th">จองคลาส</span>
+            </a>
+            <a href="index.html#portfolio" class="btn btn--outline">
+              <span lang="en">See student outcomes</span>
+              <span lang="th">ดูผลงานนักเรียน</span>
+            </a>
           </div>
         </div>
         <div class="ph ph--1x1" style="aspect-ratio: 4 / 5">
           <div class="ph__inner">
             <span class="ph__ratio">4 : 5 · PORTRAIT</span>
-            <span class="ph__what">Editorial portrait of สายเมฆ พึ่งอุดม — black & white, in studio, mid-direction</span>
+            <span class="ph__what">
+              <span lang="en">Editorial portrait of สายเมฆ พึ่งอุดม — black & white, in studio, mid-direction</span>
+              <span lang="th">ภาพถ่ายเชิงบทบรรณาธิการของสายเมฆ พึ่งอุดม — ขาวดำ ในสตูดิโอ ขณะกำกับ</span>
+            </span>
           </div>
         </div>
       </div>
@@ -68,29 +92,56 @@
         <article class="stat">
           <div class="stat__num">15<sup>+</sup></div>
           <div>
-            <div class="stat__label">Years of teaching experience</div>
-            <div class="stat__note">Number — pending client confirmation</div>
+            <div class="stat__label">
+              <span lang="en">Years of teaching experience</span>
+              <span lang="th">ปีของประสบการณ์การสอน</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Number — pending client confirmation</span>
+              <span lang="th">จำนวนปี — รอยืนยันจากลูกค้า</span>
+            </div>
           </div>
         </article>
         <article class="stat">
           <div class="stat__num">1,000<sup>+</sup></div>
           <div>
-            <div class="stat__label">Students personally trained</div>
-            <div class="stat__note">Across all programs</div>
+            <div class="stat__label">
+              <span lang="en">Students personally trained</span>
+              <span lang="th">นักเรียนที่สอนด้วยตัวเอง</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Across all programs</span>
+              <span lang="th">ครอบคลุมทุกโปรแกรม</span>
+            </div>
           </div>
         </article>
         <article class="stat">
-          <div class="stat__num">JUDGE</div>
+          <div class="stat__num">
+            <span lang="en">JUDGE</span>
+            <span lang="th">กรรมการ</span>
+          </div>
           <div>
-            <div class="stat__label">Committee / judge at a major dance organization</div>
-            <div class="stat__note">Org — pending confirmation</div>
+            <div class="stat__label">
+              <span lang="en">Committee / judge at a major dance organization</span>
+              <span lang="th">คณะทำงาน / กรรมการในองค์กรเต้นชั้นนำ</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Org — pending confirmation</span>
+              <span lang="th">องค์กร — รอยืนยัน</span>
+            </div>
           </div>
         </article>
         <article class="stat">
           <div class="stat__num">USA</div>
           <div>
-            <div class="stat__label">Coached the national team competing in the United States</div>
-            <div class="stat__note">Competition — pending confirmation</div>
+            <div class="stat__label">
+              <span lang="en">Coached the national team competing in the United States</span>
+              <span lang="th">ฝึกซ้อมทีมชาติที่ไปแข่งที่สหรัฐอเมริกา</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Competition — pending confirmation</span>
+              <span lang="th">รายการ — รอยืนยัน</span>
+            </div>
           </div>
         </article>
       </div>
@@ -100,43 +151,79 @@
   <!-- Credentials -->
   <section>
     <div class="container">
-      <span class="eyebrow">Credentials & Authority</span>
-      <h2 style="margin:14px 0 32px;max-width:18ch">A career built on credentials — and one student at a time.</h2>
+      <span class="eyebrow">
+        <span lang="en">Credentials & Authority</span>
+        <span lang="th">คุณวุฒิและความน่าเชื่อถือ</span>
+      </span>
+      <h2 style="margin:14px 0 32px;max-width:18ch">
+        <span lang="en">A career built on credentials — and one student at a time.</span>
+        <span lang="th">อาชีพที่สร้างจากคุณวุฒิ — และนักเรียนทีละคน</span>
+      </h2>
 
       <div class="cred-list">
         <div class="cred">
           <span class="cred__year">[YEAR]</span>
           <div>
-            <div class="cred__title">[Credential / Certification — pending]</div>
-            <div class="cred__body">Detail copy provided by client. e.g., teaching certification, choreography credit, master class taught.</div>
+            <div class="cred__title">
+              <span lang="en">[Credential / Certification — pending]</span>
+              <span lang="th">[คุณวุฒิ / ประกาศนียบัตร — รอข้อมูล]</span>
+            </div>
+            <div class="cred__body">
+              <span lang="en">Detail copy provided by client. e.g., teaching certification, choreography credit, master class taught.</span>
+              <span lang="th">รายละเอียดจากลูกค้า เช่น ประกาศนียบัตรการสอน เครดิตการออกแบบท่าเต้น มาสเตอร์คลาสที่สอน</span>
+            </div>
           </div>
         </div>
         <div class="cred">
           <span class="cred__year">[YEAR]</span>
           <div>
-            <div class="cred__title">Judge / Committee — [Organization name pending]</div>
-            <div class="cred__body">Detail of the role and the camp / studio served.</div>
+            <div class="cred__title">
+              <span lang="en">Judge / Committee — [Organization name pending]</span>
+              <span lang="th">กรรมการ / คณะทำงาน — [ชื่อองค์กร รอข้อมูล]</span>
+            </div>
+            <div class="cred__body">
+              <span lang="en">Detail of the role and the camp / studio served.</span>
+              <span lang="th">รายละเอียดบทบาทและแคมป์ / สตูดิโอที่ร่วมงาน</span>
+            </div>
           </div>
         </div>
         <div class="cred">
           <span class="cred__year">[YEAR]</span>
           <div>
-            <div class="cred__title">National Team Coach — Competition in the USA</div>
-            <div class="cred__body">Coached and accompanied the national team to the international competition in the United States.</div>
+            <div class="cred__title">
+              <span lang="en">National Team Coach — Competition in the USA</span>
+              <span lang="th">โค้ชทีมชาติ — การแข่งขันที่สหรัฐอเมริกา</span>
+            </div>
+            <div class="cred__body">
+              <span lang="en">Coached and accompanied the national team to the international competition in the United States.</span>
+              <span lang="th">ฝึกและร่วมเดินทางกับทีมชาติไปแข่งขันรายการนานาชาติที่สหรัฐอเมริกา</span>
+            </div>
           </div>
         </div>
         <div class="cred">
           <span class="cred__year">[YEAR]</span>
           <div>
-            <div class="cred__title">[Career milestone · pending]</div>
-            <div class="cred__body">Add notable performance, choreography, partnership, or feature.</div>
+            <div class="cred__title">
+              <span lang="en">[Career milestone · pending]</span>
+              <span lang="th">[ก้าวสำคัญในอาชีพ · รอข้อมูล]</span>
+            </div>
+            <div class="cred__body">
+              <span lang="en">Add notable performance, choreography, partnership, or feature.</span>
+              <span lang="th">เพิ่มการแสดงสำคัญ การออกแบบท่าเต้น พาร์ทเนอร์ชิป หรือบทความเด่น</span>
+            </div>
           </div>
         </div>
         <div class="cred">
           <span class="cred__year">[YEAR]</span>
           <div>
-            <div class="cred__title">Founded MYDA Studio</div>
-            <div class="cred__body">A studio built on world-class training, family warmth, and student outcomes that speak for themselves.</div>
+            <div class="cred__title">
+              <span lang="en">Founded MYDA Studio</span>
+              <span lang="th">ก่อตั้ง MYDA Studio</span>
+            </div>
+            <div class="cred__body">
+              <span lang="en">A studio built on world-class training, family warmth, and student outcomes that speak for themselves.</span>
+              <span lang="th">สตูดิโอที่สร้างขึ้นจากการฝึกระดับโลก ความอบอุ่นแบบครอบครัว และผลงานของนักเรียนที่บอกเล่าได้ด้วยตัวเอง</span>
+            </div>
           </div>
         </div>
       </div>
@@ -147,11 +234,23 @@
   <section class="section--ink">
     <div class="container">
       <div style="display:grid;gap:32px;grid-template-columns:1fr;align-items:start;max-width:60ch">
-        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Philosophy</span>
-        <h2 style="color:#fff">World-class training. Family warmth. No compromise on either.</h2>
-        <p style="color:rgba(255,255,255,0.85);font-size:18px;line-height:1.55">We train kids the way we'd train our own. Bright, focused, technical, and kind — because the dancer who stays in love with the art is the one who goes the furthest.</p>
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">
+          <span lang="en">Philosophy</span>
+          <span lang="th">ปรัชญา</span>
+        </span>
+        <h2 style="color:#fff">
+          <span lang="en">World-class training. Family warmth. No compromise on either.</span>
+          <span lang="th">ฝึกระดับโลก อบอุ่นแบบครอบครัว ไม่ลดทอนทั้งสองอย่าง</span>
+        </h2>
+        <p style="color:rgba(255,255,255,0.85);font-size:18px;line-height:1.55">
+          <span lang="en">We train kids the way we'd train our own. Bright, focused, technical, and kind — because the dancer who stays in love with the art is the one who goes the furthest.</span>
+          <span lang="th">เราสอนเด็ก ๆ เหมือนสอนลูกของเราเอง สดใส ตั้งใจ มีเทคนิค และอ่อนโยน — เพราะนักเต้นที่ยังหลงรักศิลปะอยู่ คือคนที่จะไปได้ไกลที่สุด</span>
+        </p>
         <div class="btn-row">
-          <a href="contact.html" class="btn btn--primary">Inquire now</a>
+          <a href="contact.html" class="btn btn--primary">
+            <span lang="en">Inquire now</span>
+            <span lang="th">สอบถามเลย</span>
+          </a>
         </div>
       </div>
     </div>
@@ -163,37 +262,48 @@
       <div class="site-footer__top">
         <div>
           <div class="site-footer__brand">MYDA · STUDIO</div>
-          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">Premium dance training built around real students and real outcomes — from first class to international stage.</p>
+          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">
+            <span lang="en">Premium dance training built around real students and real outcomes — from first class to international stage.</span>
+            <span lang="th">การฝึกเต้นพรีเมียมที่สร้างจากนักเรียนจริงและผลลัพธ์จริง — ตั้งแต่คลาสแรกจนถึงเวทีระดับโลก</span>
+          </p>
         </div>
         <div>
-          <h4>Pages</h4>
+          <h4><span lang="en">Pages</span><span lang="th">หน้าทั้งหมด</span></h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact.html">Inquire</a></li>
+            <li><a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a></li>
+            <li><a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a></li>
+            <li><a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a></li>
+            <li><a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4><span lang="en">Contact</span><span lang="th">ติดต่อ</span></h4>
           <ul>
-            <li>[Phone · pending]</li>
-            <li>[LINE · pending]</li>
-            <li>[Email · pending]</li>
-            <li>[Address · pending]</li>
+            <li><span lang="en">[Phone · pending]</span><span lang="th">[เบอร์โทร · รอข้อมูล]</span></li>
+            <li><span lang="en">[LINE · pending]</span><span lang="th">[LINE · รอข้อมูล]</span></li>
+            <li><span lang="en">[Email · pending]</span><span lang="th">[อีเมล · รอข้อมูล]</span></li>
+            <li><span lang="en">[Address · pending]</span><span lang="th">[ที่อยู่ · รอข้อมูล]</span></li>
           </ul>
         </div>
       </div>
       <div class="site-footer__bottom">
-        <span>© <span id="year"></span> MYDA Studio. All rights reserved.</span>
-        <span>Bangkok · Thailand</span>
+        <span>
+          <span lang="en">© <span id="year"></span> MYDA Studio. All rights reserved.</span>
+          <span lang="th">© <span id="yearTh"></span> MYDA Studio สงวนลิขสิทธิ์</span>
+        </span>
+        <span>
+          <span lang="en">Bangkok · Thailand</span>
+          <span lang="th">กรุงเทพฯ · ประเทศไทย</span>
+        </span>
       </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("year2").textContent = new Date().getFullYear();
+    var y = new Date().getFullYear();
+    document.getElementById("year").textContent = y;
+    document.getElementById("year2").textContent = y;
+    var yth = document.getElementById("yearTh"); if (yth) yth.textContent = y;
   </script>
   <script src="js/main.js"></script>
 </body>

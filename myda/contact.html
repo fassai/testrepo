@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en"
+      data-title-en="Inquire — MYDA Studio"
+      data-title-th="ติดต่อสอบถาม — MYDA Studio">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +9,7 @@
   <meta name="description" content="Sign up or inquire about MYDA Studio's dance programs. Tell us about your child and we'll match them with the right teacher and class." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&family=Noto+Sans+Thai:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -15,9 +17,16 @@
   <header class="site-header">
     <div class="container site-header__inner">
       <a href="index.html" class="brand">MYDA<span class="brand__dot"></span>STUDIO</a>
-      <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
-        <span class="hamburger__bars"></span>
-      </button>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="lang-toggle" data-toggle-lang aria-label="Toggle language" aria-pressed="false">
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="th">TH</span>
+        </button>
+        <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+          <span class="hamburger__bars"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -27,13 +36,13 @@
       <button id="menuClose" class="drawer__close" aria-label="Close menu">×</button>
     </div>
     <nav class="drawer__nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="profile.html">Profile</a>
-      <a href="partners.html">Partners</a>
-      <a href="contact.html">Inquire</a>
+      <a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a>
+      <a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a>
+      <a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a>
+      <a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a>
     </nav>
     <div class="drawer__foot">
-      <span>MYDA Studio · Bangkok</span>
+      <span><span lang="en">MYDA Studio · Bangkok</span><span lang="th">MYDA Studio · กรุงเทพฯ</span></span>
       <span>© <span id="year2"></span> MYDA Studio</span>
     </div>
   </div>
@@ -42,57 +51,106 @@
   <section class="hero">
     <div class="container">
       <div class="hero__intro">
-        <span class="eyebrow">Inquire · Sign up</span>
-        <h1 class="display" style="max-width:14ch">Let's talk about your dancer.</h1>
-        <p class="hero__sub">Fill in the form and we'll get back to you within 24 hours with class options, schedules, and an honest recommendation.</p>
+        <span class="eyebrow">
+          <span lang="en">Inquire · Sign up</span>
+          <span lang="th">สอบถาม · สมัคร</span>
+        </span>
+        <h1 class="display" style="max-width:14ch">
+          <span lang="en">Let's talk about your dancer.</span>
+          <span lang="th">มาคุยเรื่องนักเต้นของคุณกัน</span>
+        </h1>
+        <p class="hero__sub">
+          <span lang="en">Fill in the form and we'll get back to you within 24 hours with class options, schedules, and an honest recommendation.</span>
+          <span lang="th">กรอกแบบฟอร์ม แล้วเราจะติดต่อกลับภายใน 24 ชั่วโมง พร้อมตัวเลือกคลาส ตารางเรียน และคำแนะนำที่ตรงไปตรงมา</span>
+        </p>
       </div>
 
       <div id="inquire" style="display:grid;gap:48px;grid-template-columns:1fr;align-items:start;">
         <form class="form" onsubmit="event.preventDefault(); document.getElementById('formNote').hidden=false;">
           <div class="field--row">
             <div class="field">
-              <label for="parent">Parent / guardian name</label>
-              <input id="parent" name="parent" type="text" required placeholder="Your full name" />
+              <label for="parent">
+                <span lang="en">Parent / guardian name</span>
+                <span lang="th">ชื่อผู้ปกครอง</span>
+              </label>
+              <input id="parent" name="parent" type="text" required
+                data-ph-en="Your full name"
+                data-ph-th="ชื่อเต็มของคุณ"
+                placeholder="Your full name" />
             </div>
             <div class="field">
-              <label for="phone">Phone / LINE</label>
-              <input id="phone" name="phone" type="text" required placeholder="08x-xxx-xxxx" />
+              <label for="phone">
+                <span lang="en">Phone / LINE</span>
+                <span lang="th">เบอร์โทร / LINE</span>
+              </label>
+              <input id="phone" name="phone" type="text" required
+                data-ph-en="08x-xxx-xxxx"
+                data-ph-th="08x-xxx-xxxx"
+                placeholder="08x-xxx-xxxx" />
             </div>
           </div>
 
           <div class="field--row">
             <div class="field">
-              <label for="child">Child's name</label>
-              <input id="child" name="child" type="text" placeholder="Optional" />
+              <label for="child">
+                <span lang="en">Child's name</span>
+                <span lang="th">ชื่อเด็ก</span>
+              </label>
+              <input id="child" name="child" type="text"
+                data-ph-en="Optional"
+                data-ph-th="ใส่หรือไม่ก็ได้"
+                placeholder="Optional" />
             </div>
             <div class="field">
-              <label for="age">Child's age</label>
-              <input id="age" name="age" type="number" min="3" max="25" placeholder="e.g. 9" />
+              <label for="age">
+                <span lang="en">Child's age</span>
+                <span lang="th">อายุของเด็ก</span>
+              </label>
+              <input id="age" name="age" type="number" min="3" max="25"
+                data-ph-en="e.g. 9"
+                data-ph-th="เช่น 9"
+                placeholder="e.g. 9" />
             </div>
           </div>
 
           <div class="field">
-            <label for="goal">What's the goal?</label>
+            <label for="goal">
+              <span lang="en">What's the goal?</span>
+              <span lang="th">เป้าหมายคืออะไร?</span>
+            </label>
             <select id="goal" name="goal">
-              <option>For fun and confidence</option>
-              <option>Serious training — competition track</option>
-              <option>Pro-track — preparing for label / artist development</option>
-              <option>Not sure yet — please advise</option>
+              <option data-en="For fun and confidence" data-th="เพื่อความสนุกและความมั่นใจ">For fun and confidence</option>
+              <option data-en="Serious training — competition track" data-th="ฝึกจริงจัง — สาย Competition">Serious training — competition track</option>
+              <option data-en="Pro-track — preparing for label / artist development" data-th="Pro-track — เตรียมเข้าค่าย / พัฒนาเป็นศิลปิน">Pro-track — preparing for label / artist development</option>
+              <option data-en="Not sure yet — please advise" data-th="ยังไม่แน่ใจ — รบกวนแนะนำ">Not sure yet — please advise</option>
             </select>
           </div>
 
           <div class="field">
-            <label for="message">Tell us about your dancer</label>
-            <textarea id="message" name="message" placeholder="Their level, what they love, what you're hoping for..."></textarea>
+            <label for="message">
+              <span lang="en">Tell us about your dancer</span>
+              <span lang="th">เล่าเรื่องนักเต้นของคุณให้ฟัง</span>
+            </label>
+            <textarea id="message" name="message"
+              data-ph-en="Their level, what they love, what you're hoping for..."
+              data-ph-th="ระดับของเขา สิ่งที่เขารัก สิ่งที่คุณหวัง..."
+              placeholder="Their level, what they love, what you're hoping for..."></textarea>
           </div>
 
           <div class="btn-row" style="margin-top:8px">
-            <button type="submit" class="btn btn--dark">Send inquiry</button>
-            <a href="#" class="btn btn--outline">Add me on LINE instead</a>
+            <button type="submit" class="btn btn--dark">
+              <span lang="en">Send inquiry</span>
+              <span lang="th">ส่งคำถาม</span>
+            </button>
+            <a href="#" class="btn btn--outline">
+              <span lang="en">Add me on LINE instead</span>
+              <span lang="th">แอด LINE แทน</span>
+            </a>
           </div>
 
           <p id="formNote" hidden style="margin-top:18px;padding:14px 16px;border:1px solid var(--ink);background:#fff;font-size:14px">
-            Thank you — your inquiry has been received. We'll reply within 24 hours. <em>(Form delivery endpoint pending — to be wired during deployment.)</em>
+            <span lang="en">Thank you — your inquiry has been received. We'll reply within 24 hours. <em>(Form delivery endpoint pending — to be wired during deployment.)</em></span>
+            <span lang="th">ขอบคุณค่ะ — เราได้รับคำถามของคุณแล้ว และจะติดต่อกลับภายใน 24 ชั่วโมง <em>(ปลายทางของฟอร์มรอตั้งค่าตอนติดตั้งระบบ)</em></span>
           </p>
         </form>
       </div>
@@ -103,13 +161,19 @@
   <section class="section--ink">
     <div class="container">
       <div style="display:grid;gap:32px;grid-template-columns:1fr;max-width:60ch">
-        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Or reach us directly</span>
-        <h2 style="color:#fff">We answer fast — usually within hours.</h2>
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">
+          <span lang="en">Or reach us directly</span>
+          <span lang="th">หรือติดต่อโดยตรง</span>
+        </span>
+        <h2 style="color:#fff">
+          <span lang="en">We answer fast — usually within hours.</span>
+          <span lang="th">เราตอบไว — มักภายในไม่กี่ชั่วโมง</span>
+        </h2>
         <ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;color:rgba(255,255,255,0.85);font-size:18px">
-          <li><strong>Phone</strong> · [number pending]</li>
-          <li><strong>LINE</strong> · [@handle pending]</li>
-          <li><strong>Email</strong> · [pending]</li>
-          <li><strong>Studio</strong> · [address pending]</li>
+          <li><strong><span lang="en">Phone</span><span lang="th">โทร</span></strong> · <span lang="en">[number pending]</span><span lang="th">[เบอร์รอข้อมูล]</span></li>
+          <li><strong>LINE</strong> · <span lang="en">[@handle pending]</span><span lang="th">[@LINE รอข้อมูล]</span></li>
+          <li><strong><span lang="en">Email</span><span lang="th">อีเมล</span></strong> · <span lang="en">[pending]</span><span lang="th">[รอข้อมูล]</span></li>
+          <li><strong><span lang="en">Studio</span><span lang="th">สตูดิโอ</span></strong> · <span lang="en">[address pending]</span><span lang="th">[ที่อยู่รอข้อมูล]</span></li>
         </ul>
       </div>
     </div>
@@ -121,37 +185,48 @@
       <div class="site-footer__top">
         <div>
           <div class="site-footer__brand">MYDA · STUDIO</div>
-          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">Premium dance training built around real students and real outcomes — from first class to international stage.</p>
+          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">
+            <span lang="en">Premium dance training built around real students and real outcomes — from first class to international stage.</span>
+            <span lang="th">การฝึกเต้นพรีเมียมที่สร้างจากนักเรียนจริงและผลลัพธ์จริง — ตั้งแต่คลาสแรกจนถึงเวทีระดับโลก</span>
+          </p>
         </div>
         <div>
-          <h4>Pages</h4>
+          <h4><span lang="en">Pages</span><span lang="th">หน้าทั้งหมด</span></h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact.html">Inquire</a></li>
+            <li><a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a></li>
+            <li><a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a></li>
+            <li><a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a></li>
+            <li><a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4><span lang="en">Contact</span><span lang="th">ติดต่อ</span></h4>
           <ul>
-            <li>[Phone · pending]</li>
-            <li>[LINE · pending]</li>
-            <li>[Email · pending]</li>
-            <li>[Address · pending]</li>
+            <li><span lang="en">[Phone · pending]</span><span lang="th">[เบอร์โทร · รอข้อมูล]</span></li>
+            <li><span lang="en">[LINE · pending]</span><span lang="th">[LINE · รอข้อมูล]</span></li>
+            <li><span lang="en">[Email · pending]</span><span lang="th">[อีเมล · รอข้อมูล]</span></li>
+            <li><span lang="en">[Address · pending]</span><span lang="th">[ที่อยู่ · รอข้อมูล]</span></li>
           </ul>
         </div>
       </div>
       <div class="site-footer__bottom">
-        <span>© <span id="year"></span> MYDA Studio. All rights reserved.</span>
-        <span>Bangkok · Thailand</span>
+        <span>
+          <span lang="en">© <span id="year"></span> MYDA Studio. All rights reserved.</span>
+          <span lang="th">© <span id="yearTh"></span> MYDA Studio สงวนลิขสิทธิ์</span>
+        </span>
+        <span>
+          <span lang="en">Bangkok · Thailand</span>
+          <span lang="th">กรุงเทพฯ · ประเทศไทย</span>
+        </span>
       </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("year2").textContent = new Date().getFullYear();
+    var y = new Date().getFullYear();
+    document.getElementById("year").textContent = y;
+    document.getElementById("year2").textContent = y;
+    var yth = document.getElementById("yearTh"); if (yth) yth.textContent = y;
   </script>
   <script src="js/main.js"></script>
 </body>

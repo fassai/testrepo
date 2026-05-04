@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en"
+      data-title-en="MYDA Studio — World-class dance training, made for families"
+      data-title-th="MYDA Studio — สอนเต้นระดับโลก สำหรับทุกครอบครัว">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +9,7 @@
   <meta name="description" content="MYDA Studio — over 1,000 students trained, K-pop artists produced, national champions. Premium dance education with a family heart." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;900&family=Noto+Sans+Thai:wght@400;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -18,9 +20,16 @@
       <a href="index.html" class="brand">
         MYDA<span class="brand__dot"></span>STUDIO
       </a>
-      <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
-        <span class="hamburger__bars"></span>
-      </button>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="lang-toggle" data-toggle-lang aria-label="Toggle language" aria-pressed="false">
+          <span class="lang-toggle__opt" data-lang="en">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt" data-lang="th">TH</span>
+        </button>
+        <button id="menuOpen" class="hamburger" aria-label="Open menu" aria-controls="drawer" aria-expanded="false">
+          <span class="hamburger__bars"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -31,13 +40,13 @@
       <button id="menuClose" class="drawer__close" aria-label="Close menu">×</button>
     </div>
     <nav class="drawer__nav" aria-label="Main">
-      <a href="index.html">Home</a>
-      <a href="profile.html">Profile</a>
-      <a href="partners.html">Partners</a>
-      <a href="contact.html">Inquire</a>
+      <a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a>
+      <a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a>
+      <a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a>
+      <a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a>
     </nav>
     <div class="drawer__foot">
-      <span>MYDA Studio · Bangkok</span>
+      <span><span lang="en">MYDA Studio · Bangkok</span><span lang="th">MYDA Studio · กรุงเทพฯ</span></span>
       <span>© <span id="year2"></span> MYDA Studio</span>
     </div>
   </div>
@@ -46,41 +55,77 @@
   <section class="hero">
     <div class="container">
       <div class="hero__intro">
-        <span class="eyebrow">Dance · Performance · Artist Development</span>
-        <h1 class="hero__title display">Where dancers become artists.</h1>
-        <p class="hero__sub">A premium dance studio with a family heart — training the next generation of performers, recording artists, and champions.</p>
+        <span class="eyebrow">
+          <span lang="en">Dance · Performance · Artist Development</span>
+          <span lang="th">เต้น · การแสดง · พัฒนาศิลปิน</span>
+        </span>
+        <h1 class="hero__title display">
+          <span lang="en">Where dancers become artists.</span>
+          <span lang="th">ที่ที่นักเต้น กลายเป็นศิลปิน</span>
+        </h1>
+        <p class="hero__sub">
+          <span lang="en">A premium dance studio with a family heart — training the next generation of performers, recording artists, and champions.</span>
+          <span lang="th">สตูดิโอเต้นพรีเมียม ด้วยหัวใจแบบครอบครัว — บ่มเพาะนักแสดง ศิลปิน และแชมป์รุ่นต่อไป</span>
+        </p>
       </div>
 
       <div class="stats" role="list">
         <article class="stat" role="listitem">
           <div class="stat__num">1,000<sup>+</sup></div>
           <div>
-            <div class="stat__label">Students trained at MYDA Studio</div>
-            <div class="stat__note">Coached on stage, on screen, in life</div>
+            <div class="stat__label">
+              <span lang="en">Students trained at MYDA Studio</span>
+              <span lang="th">นักเรียนที่ผ่านการฝึกที่ MYDA Studio</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Coached on stage, on screen, in life</span>
+              <span lang="th">ฝึกทั้งบนเวที หน้ากล้อง และในชีวิตจริง</span>
+            </div>
           </div>
         </article>
 
         <article class="stat" role="listitem">
           <div class="stat__num">4–5</div>
           <div>
-            <div class="stat__label">K-pop artists produced — students who became active idols</div>
-            <div class="stat__note">Names — pending client confirmation</div>
+            <div class="stat__label">
+              <span lang="en">K-pop artists produced — students who became active idols</span>
+              <span lang="th">ศิลปิน K-pop ที่ปั้นมา — นักเรียนที่ก้าวสู่การเป็นไอดอล</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Names — pending client confirmation</span>
+              <span lang="th">ชื่อ — รอการยืนยันจากลูกค้า</span>
+            </div>
           </div>
         </article>
 
         <article class="stat" role="listitem">
-          <div class="stat__num">JUDGE</div>
+          <div class="stat__num">
+            <span lang="en">JUDGE</span>
+            <span lang="th">กรรมการ</span>
+          </div>
           <div>
-            <div class="stat__label">Studio owner serves as judge / committee at a major dance organization</div>
-            <div class="stat__note">Organization — pending client confirmation</div>
+            <div class="stat__label">
+              <span lang="en">Studio owner serves as judge / committee at a major dance organization</span>
+              <span lang="th">เจ้าของสตูดิโอเป็นกรรมการ / คณะทำงานในองค์กรเต้นชั้นนำ</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Organization — pending client confirmation</span>
+              <span lang="th">องค์กร — รอยืนยันจากลูกค้า</span>
+            </div>
           </div>
         </article>
 
         <article class="stat" role="listitem">
           <div class="stat__num">USA</div>
           <div>
-            <div class="stat__label">National team sent to compete in the United States</div>
-            <div class="stat__note">Competition name — pending client confirmation</div>
+            <div class="stat__label">
+              <span lang="en">National team sent to compete in the United States</span>
+              <span lang="th">ทีมชาติที่ถูกส่งไปแข่งขันที่สหรัฐอเมริกา</span>
+            </div>
+            <div class="stat__note">
+              <span lang="en">Competition name — pending client confirmation</span>
+              <span lang="th">ชื่อรายการ — รอยืนยันจากลูกค้า</span>
+            </div>
           </div>
         </article>
       </div>
@@ -91,116 +136,215 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
       <div class="portfolio__head">
-        <span class="eyebrow">Portfolio · Student outcomes</span>
-        <h2>Our students don't just dance.<br/>They go places.</h2>
-        <p class="lead text-muted">From signed K-pop idols to national champions sent to America — every name below is a student who started here.</p>
+        <span class="eyebrow">
+          <span lang="en">Portfolio · Student outcomes</span>
+          <span lang="th">ผลงาน · ความสำเร็จของนักเรียน</span>
+        </span>
+        <h2>
+          <span lang="en">Our students don't just dance.<br/>They go places.</span>
+          <span lang="th">นักเรียนของเรา ไม่ได้แค่เต้น<br/>เขาไปไกลกว่านั้น</span>
+        </h2>
+        <p class="lead text-muted">
+          <span lang="en">From signed K-pop idols to national champions sent to America — every name below is a student who started here.</span>
+          <span lang="th">ตั้งแต่ไอดอล K-pop ที่เซ็นสัญญาแล้ว จนถึงแชมป์ระดับชาติที่ถูกส่งไปแข่งที่อเมริกา — ทุกชื่อด้านล่างคือนักเรียนที่เริ่มต้นที่นี่</span>
+        </p>
       </div>
 
       <!-- PRIORITY TIER -->
-      <span class="tier-label">Priority — Headliners</span>
+      <span class="tier-label">
+        <span lang="en">Priority — Headliners</span>
+        <span lang="th">ลำดับแรก — นักเรียนเด่น</span>
+      </span>
 
       <div class="priority-grid">
         <article class="card card--lg">
           <div class="ph ph--16x9">
             <div class="ph__inner">
               <span class="ph__ratio">16 : 9 · LANDSCAPE</span>
-              <span class="ph__what">Hero video / banner of confirmed K-pop artist (student name TBD) — performance or studio footage</span>
+              <span class="ph__what">
+                <span lang="en">Hero video / banner of confirmed K-pop artist (student name TBD) — performance or studio footage</span>
+                <span lang="th">วิดีโอ / แบนเนอร์หลักของศิลปิน K-pop ที่ยืนยันแล้ว (รอชื่อนักเรียน) — ฟุตเทจการแสดงหรือในสตูดิโอ</span>
+              </span>
             </div>
           </div>
-          <span class="card__tag">K-pop Artist</span>
-          <h3 class="card__title">[Confirmed K-pop artist · name pending]</h3>
-          <p class="card__meta">Trained at MYDA · Active recording artist</p>
-          <p class="card__body">Student trained from beginner level through pro-track, signed to a label, and now performing as a working K-pop artist.</p>
+          <span class="card__tag">
+            <span lang="en">K-pop Artist</span>
+            <span lang="th">ศิลปิน K-pop</span>
+          </span>
+          <h3 class="card__title">
+            <span lang="en">[Confirmed K-pop artist · name pending]</span>
+            <span lang="th">[ศิลปิน K-pop ที่ยืนยันแล้ว · รอชื่อ]</span>
+          </h3>
+          <p class="card__meta">
+            <span lang="en">Trained at MYDA · Active recording artist</span>
+            <span lang="th">ฝึกที่ MYDA · ศิลปินสังกัดค่าย</span>
+          </p>
+          <p class="card__body">
+            <span lang="en">Student trained from beginner level through pro-track, signed to a label, and now performing as a working K-pop artist.</span>
+            <span lang="th">นักเรียนที่เริ่มจากระดับเริ่มต้นจนถึง Pro-track เซ็นสัญญากับค่าย และตอนนี้เป็นศิลปิน K-pop ที่ทำงานจริง</span>
+          </p>
         </article>
 
         <article class="card card--md">
           <div class="ph ph--9x16">
             <div class="ph__inner">
               <span class="ph__ratio">9 : 16 · PORTRAIT</span>
-              <span class="ph__what">TikTok / Reels clip — IHI / National Pop dance champion routine</span>
+              <span class="ph__what">
+                <span lang="en">TikTok / Reels clip — IHI / National Pop dance champion routine</span>
+                <span lang="th">คลิป TikTok / Reels — รูทีนแชมป์เต้น IHI / National Pop</span>
+              </span>
             </div>
           </div>
-          <span class="card__tag">National Champion</span>
+          <span class="card__tag">
+            <span lang="en">National Champion</span>
+            <span lang="th">แชมป์ระดับชาติ</span>
+          </span>
           <h3 class="card__title">IHI / National Pop Champion</h3>
-          <p class="card__meta">Sent to compete in the United States</p>
-          <p class="card__body">Champion at the IHI / National Pop competition; selected for the national team that competed on the international stage in America.</p>
+          <p class="card__meta">
+            <span lang="en">Sent to compete in the United States</span>
+            <span lang="th">ถูกส่งไปแข่งขันที่สหรัฐอเมริกา</span>
+          </p>
+          <p class="card__body">
+            <span lang="en">Champion at the IHI / National Pop competition; selected for the national team that competed on the international stage in America.</span>
+            <span lang="th">แชมป์รายการ IHI / National Pop ได้รับคัดเลือกเข้าทีมชาติไปแข่งบนเวทีระดับนานาชาติที่อเมริกา</span>
+          </p>
         </article>
 
         <article class="card card--sm">
           <div class="ph ph--1x1">
             <div class="ph__inner">
               <span class="ph__ratio">1 : 1 · SQUARE</span>
-              <span class="ph__what">Headshot / press photo — K-pop artist #2 (name TBD)</span>
+              <span class="ph__what">
+                <span lang="en">Headshot / press photo — K-pop artist #2 (name TBD)</span>
+                <span lang="th">ภาพถ่าย / Press — ศิลปิน K-pop #2 (รอชื่อ)</span>
+              </span>
             </div>
           </div>
-          <span class="card__tag">K-pop Artist</span>
-          <h3 class="card__title">[K-pop artist #2 · name pending]</h3>
-          <p class="card__meta">Active idol</p>
+          <span class="card__tag">
+            <span lang="en">K-pop Artist</span>
+            <span lang="th">ศิลปิน K-pop</span>
+          </span>
+          <h3 class="card__title">
+            <span lang="en">[K-pop artist #2 · name pending]</span>
+            <span lang="th">[ศิลปิน K-pop #2 · รอชื่อ]</span>
+          </h3>
+          <p class="card__meta">
+            <span lang="en">Active idol</span>
+            <span lang="th">ไอดอลปัจจุบัน</span>
+          </p>
         </article>
 
         <article class="card card--sm">
           <div class="ph ph--1x1">
             <div class="ph__inner">
               <span class="ph__ratio">1 : 1 · SQUARE</span>
-              <span class="ph__what">Headshot / press photo — K-pop artist #3 (name TBD)</span>
+              <span class="ph__what">
+                <span lang="en">Headshot / press photo — K-pop artist #3 (name TBD)</span>
+                <span lang="th">ภาพถ่าย / Press — ศิลปิน K-pop #3 (รอชื่อ)</span>
+              </span>
             </div>
           </div>
-          <span class="card__tag">K-pop Artist</span>
-          <h3 class="card__title">[K-pop artist #3 · name pending]</h3>
-          <p class="card__meta">Active idol</p>
+          <span class="card__tag">
+            <span lang="en">K-pop Artist</span>
+            <span lang="th">ศิลปิน K-pop</span>
+          </span>
+          <h3 class="card__title">
+            <span lang="en">[K-pop artist #3 · name pending]</span>
+            <span lang="th">[ศิลปิน K-pop #3 · รอชื่อ]</span>
+          </h3>
+          <p class="card__meta">
+            <span lang="en">Active idol</span>
+            <span lang="th">ไอดอลปัจจุบัน</span>
+          </p>
         </article>
 
         <article class="card card--sm">
           <div class="ph ph--1x1">
             <div class="ph__inner">
               <span class="ph__ratio">1 : 1 · SQUARE</span>
-              <span class="ph__what">Photo — student signed to label (name TBD)</span>
+              <span class="ph__what">
+                <span lang="en">Photo — student signed to label (name TBD)</span>
+                <span lang="th">ภาพถ่าย — นักเรียนที่เซ็นสัญญาค่าย (รอชื่อ)</span>
+              </span>
             </div>
           </div>
-          <span class="card__tag">Label Signed</span>
-          <h3 class="card__title">[Label-signed student · name pending]</h3>
-          <p class="card__meta">Recording artist · in development</p>
+          <span class="card__tag">
+            <span lang="en">Label Signed</span>
+            <span lang="th">เซ็นสัญญาค่ายเพลง</span>
+          </span>
+          <h3 class="card__title">
+            <span lang="en">[Label-signed student · name pending]</span>
+            <span lang="th">[นักเรียนที่เซ็นสัญญาค่าย · รอชื่อ]</span>
+          </h3>
+          <p class="card__meta">
+            <span lang="en">Recording artist · in development</span>
+            <span lang="th">ศิลปิน · กำลังพัฒนา</span>
+          </p>
         </article>
       </div>
 
       <!-- MID-PORTFOLIO CTA INTERCEPT -->
       <aside class="cta-intercept" aria-label="Inquiry call to action">
         <div>
-          <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Before you keep scrolling</span>
-          <h2 style="margin-top:14px">If this looks like the future you want for your child — let's talk now.</h2>
+          <span class="eyebrow" style="color:rgba(255,255,255,0.7)">
+            <span lang="en">Before you keep scrolling</span>
+            <span lang="th">ก่อนเลื่อนต่อ</span>
+          </span>
+          <h2 style="margin-top:14px">
+            <span lang="en">If this looks like the future you want for your child — let's talk now.</span>
+            <span lang="th">ถ้าภาพนี้คืออนาคตที่คุณอยากให้ลูก — มาคุยกันเลย</span>
+          </h2>
         </div>
         <div>
-          <p>Spaces in our pro-track classes are limited. Reach out today and we'll guide you through the right program for your child's age, level, and goal.</p>
+          <p>
+            <span lang="en">Spaces in our pro-track classes are limited. Reach out today and we'll guide you through the right program for your child's age, level, and goal.</span>
+            <span lang="th">ที่นั่งในคลาส Pro-track มีจำกัด ติดต่อเราวันนี้ แล้วเราจะแนะนำโปรแกรมที่เหมาะกับอายุ ระดับ และเป้าหมายของลูกคุณ</span>
+          </p>
           <div class="btn-row">
-            <a href="contact.html" class="btn btn--primary">Sign up now</a>
-            <a href="contact.html#inquire" class="btn btn--ghost">Inquire for more info</a>
+            <a href="contact.html" class="btn btn--primary">
+              <span lang="en">Sign up now</span>
+              <span lang="th">สมัครเลย</span>
+            </a>
+            <a href="contact.html#inquire" class="btn btn--ghost">
+              <span lang="en">Inquire for more info</span>
+              <span lang="th">สอบถามเพิ่มเติม</span>
+            </a>
           </div>
         </div>
       </aside>
 
       <!-- SECONDARY TIER -->
-      <span class="tier-label">All Students — Full Roster</span>
-      <p class="lead text-muted" style="margin-bottom:32px">Over 1,000 students have walked through our doors. Below, a representative roster of dancers who've gone on to perform, compete, sign, and teach. Full list pending client confirmation.</p>
+      <span class="tier-label">
+        <span lang="en">All Students — Full Roster</span>
+        <span lang="th">นักเรียนทั้งหมด — รายชื่อเต็ม</span>
+      </span>
+      <p class="lead text-muted" style="margin-bottom:32px">
+        <span lang="en">Over 1,000 students have walked through our doors. Below, a representative roster of dancers who've gone on to perform, compete, sign, and teach. Full list pending client confirmation.</span>
+        <span lang="th">นักเรียนกว่า 1,000 คนเคยผ่านสตูดิโอแห่งนี้ ด้านล่างเป็นตัวอย่างของนักเต้นที่ก้าวต่อไปสู่การแสดง การแข่งขัน การเซ็นสัญญา และการสอน รายชื่อเต็มรอการยืนยันจากลูกค้า</span>
+      </p>
 
       <ol class="roster" role="list" style="list-style:none;padding:0;margin:0">
-        <li class="roster__row"><span class="roster__num">01</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">K-pop · Signed</span></li>
-        <li class="roster__row"><span class="roster__num">02</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">K-pop · Signed</span></li>
-        <li class="roster__row"><span class="roster__num">03</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">K-pop · Active</span></li>
-        <li class="roster__row"><span class="roster__num">04</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">National Champion · USA</span></li>
-        <li class="roster__row"><span class="roster__num">05</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Label · Recording</span></li>
-        <li class="roster__row"><span class="roster__num">06</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Performer · TV</span></li>
-        <li class="roster__row"><span class="roster__num">07</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Performer · TV</span></li>
-        <li class="roster__row"><span class="roster__num">08</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Stage · Tour</span></li>
-        <li class="roster__row"><span class="roster__num">09</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Competition · Finalist</span></li>
-        <li class="roster__row"><span class="roster__num">10</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Competition · Finalist</span></li>
-        <li class="roster__row"><span class="roster__num">11</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Choreographer</span></li>
-        <li class="roster__row"><span class="roster__num">12</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Instructor</span></li>
-        <li class="roster__row"><span class="roster__num">13</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Performer</span></li>
-        <li class="roster__row"><span class="roster__num">14</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Performer</span></li>
-        <li class="roster__row"><span class="roster__num">15</span><span class="roster__name">[Student name · pending]</span><span class="roster__detail">Performer</span></li>
+        <li class="roster__row"><span class="roster__num">01</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">K-pop · Signed</span><span lang="th">K-pop · เซ็นสัญญา</span></span></li>
+        <li class="roster__row"><span class="roster__num">02</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">K-pop · Signed</span><span lang="th">K-pop · เซ็นสัญญา</span></span></li>
+        <li class="roster__row"><span class="roster__num">03</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">K-pop · Active</span><span lang="th">K-pop · ปัจจุบัน</span></span></li>
+        <li class="roster__row"><span class="roster__num">04</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">National Champion · USA</span><span lang="th">แชมป์ระดับชาติ · USA</span></span></li>
+        <li class="roster__row"><span class="roster__num">05</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Label · Recording</span><span lang="th">ค่ายเพลง · บันทึกเสียง</span></span></li>
+        <li class="roster__row"><span class="roster__num">06</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Performer · TV</span><span lang="th">นักแสดง · TV</span></span></li>
+        <li class="roster__row"><span class="roster__num">07</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Performer · TV</span><span lang="th">นักแสดง · TV</span></span></li>
+        <li class="roster__row"><span class="roster__num">08</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Stage · Tour</span><span lang="th">เวที · ทัวร์</span></span></li>
+        <li class="roster__row"><span class="roster__num">09</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Competition · Finalist</span><span lang="th">การแข่งขัน · เข้ารอบสุดท้าย</span></span></li>
+        <li class="roster__row"><span class="roster__num">10</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Competition · Finalist</span><span lang="th">การแข่งขัน · เข้ารอบสุดท้าย</span></span></li>
+        <li class="roster__row"><span class="roster__num">11</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Choreographer</span><span lang="th">นักออกแบบท่าเต้น</span></span></li>
+        <li class="roster__row"><span class="roster__num">12</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Instructor</span><span lang="th">ครูสอน</span></span></li>
+        <li class="roster__row"><span class="roster__num">13</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Performer</span><span lang="th">นักแสดง</span></span></li>
+        <li class="roster__row"><span class="roster__num">14</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Performer</span><span lang="th">นักแสดง</span></span></li>
+        <li class="roster__row"><span class="roster__num">15</span><span class="roster__name"><span lang="en">[Student name · pending]</span><span lang="th">[ชื่อนักเรียน · รอข้อมูล]</span></span><span class="roster__detail"><span lang="en">Performer</span><span lang="th">นักแสดง</span></span></li>
       </ol>
 
-      <p class="text-muted" style="margin-top:24px;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;">Roster excerpt — full student list to be supplied by client (สายเมฆ).</p>
+      <p class="text-muted" style="margin-top:24px;font-size:13px;letter-spacing:0.04em;text-transform:uppercase;">
+        <span lang="en">Roster excerpt — full student list to be supplied by client (สายเมฆ).</span>
+        <span lang="th">รายชื่อตัวอย่าง — รายชื่อนักเรียนเต็มจะส่งโดยลูกค้า (สายเมฆ)</span>
+      </p>
     </div>
   </section>
 
@@ -208,12 +352,27 @@
   <section class="section--ink">
     <div class="container">
       <div style="display:flex;flex-direction:column;gap:24px;align-items:flex-start;max-width:60ch">
-        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">Ready to start?</span>
-        <h2 style="color:#fff">Your child's first class is one message away.</h2>
-        <p style="color:rgba(255,255,255,0.78);font-size:18px">Tell us your child's age and what they love about dance — we'll match them with the right teacher and class.</p>
+        <span class="eyebrow" style="color:rgba(255,255,255,0.7)">
+          <span lang="en">Ready to start?</span>
+          <span lang="th">พร้อมเริ่มแล้วหรือยัง?</span>
+        </span>
+        <h2 style="color:#fff">
+          <span lang="en">Your child's first class is one message away.</span>
+          <span lang="th">คลาสแรกของลูกคุณ ห่างไปแค่ข้อความเดียว</span>
+        </h2>
+        <p style="color:rgba(255,255,255,0.78);font-size:18px">
+          <span lang="en">Tell us your child's age and what they love about dance — we'll match them with the right teacher and class.</span>
+          <span lang="th">บอกอายุของลูก และสิ่งที่เขารักในการเต้น — เราจะจับคู่ครูและคลาสที่เหมาะกับเขาให้</span>
+        </p>
         <div class="btn-row">
-          <a href="contact.html" class="btn btn--primary">Sign up now</a>
-          <a href="profile.html" class="btn btn--ghost">Meet the teacher</a>
+          <a href="contact.html" class="btn btn--primary">
+            <span lang="en">Sign up now</span>
+            <span lang="th">สมัครเลย</span>
+          </a>
+          <a href="profile.html" class="btn btn--ghost">
+            <span lang="en">Meet the teacher</span>
+            <span lang="th">รู้จักครู</span>
+          </a>
         </div>
       </div>
     </div>
@@ -225,37 +384,48 @@
       <div class="site-footer__top">
         <div>
           <div class="site-footer__brand">MYDA · STUDIO</div>
-          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">Premium dance training built around real students and real outcomes — from first class to international stage.</p>
+          <p style="color:rgba(255,255,255,0.7);max-width:46ch;margin-top:14px">
+            <span lang="en">Premium dance training built around real students and real outcomes — from first class to international stage.</span>
+            <span lang="th">การฝึกเต้นพรีเมียมที่สร้างจากนักเรียนจริงและผลลัพธ์จริง — ตั้งแต่คลาสแรกจนถึงเวทีระดับโลก</span>
+          </p>
         </div>
         <div>
-          <h4>Pages</h4>
+          <h4><span lang="en">Pages</span><span lang="th">หน้าทั้งหมด</span></h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="partners.html">Partners</a></li>
-            <li><a href="contact.html">Inquire</a></li>
+            <li><a href="index.html"><span lang="en">Home</span><span lang="th">หน้าหลัก</span></a></li>
+            <li><a href="profile.html"><span lang="en">Profile</span><span lang="th">โปรไฟล์</span></a></li>
+            <li><a href="partners.html"><span lang="en">Partners</span><span lang="th">พาร์ทเนอร์</span></a></li>
+            <li><a href="contact.html"><span lang="en">Inquire</span><span lang="th">ติดต่อสอบถาม</span></a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4><span lang="en">Contact</span><span lang="th">ติดต่อ</span></h4>
           <ul>
-            <li>[Phone · pending]</li>
-            <li>[LINE · pending]</li>
-            <li>[Email · pending]</li>
-            <li>[Address · pending]</li>
+            <li><span lang="en">[Phone · pending]</span><span lang="th">[เบอร์โทร · รอข้อมูล]</span></li>
+            <li><span lang="en">[LINE · pending]</span><span lang="th">[LINE · รอข้อมูล]</span></li>
+            <li><span lang="en">[Email · pending]</span><span lang="th">[อีเมล · รอข้อมูล]</span></li>
+            <li><span lang="en">[Address · pending]</span><span lang="th">[ที่อยู่ · รอข้อมูล]</span></li>
           </ul>
         </div>
       </div>
       <div class="site-footer__bottom">
-        <span>© <span id="year"></span> MYDA Studio. All rights reserved.</span>
-        <span>Bangkok · Thailand</span>
+        <span>
+          <span lang="en">© <span id="year"></span> MYDA Studio. All rights reserved.</span>
+          <span lang="th">© <span id="yearTh"></span> MYDA Studio สงวนลิขสิทธิ์</span>
+        </span>
+        <span>
+          <span lang="en">Bangkok · Thailand</span>
+          <span lang="th">กรุงเทพฯ · ประเทศไทย</span>
+        </span>
       </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("year2").textContent = new Date().getFullYear();
+    var y = new Date().getFullYear();
+    document.getElementById("year").textContent = y;
+    document.getElementById("year2").textContent = y;
+    var yth = document.getElementById("yearTh"); if (yth) yth.textContent = y;
   </script>
   <script src="js/main.js"></script>
 </body>
