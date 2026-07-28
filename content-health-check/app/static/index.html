@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biz Content Health Check — ตรวจสุขภาพคอนเทนต์ธุรกิจ ฟรี</title>
+<meta name="description" content="กรอกชื่อธุรกิจ + social handle แล้วรับผลตรวจสุขภาพคอนเทนต์ 7 ด้าน แบบใบตรวจสุขภาพ ฟรี — ใช้ส่องคู่แข่งก็ได้ 🤫">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<main class="wrap">
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="hero">
+    <div class="badge">ฟรี · ไม่ต้องติดตั้งแอป</div>
+    <h1>ตรวจสุขภาพ<br><em>คอนเทนต์ธุรกิจ</em> ของคุณ</h1>
+    <p class="sub">เหมือนใบตรวจสุขภาพ (BMI) แต่เป็นของธุรกิจคุณ —
+       สแกนโซเชียลจริง วิเคราะห์จริง ให้คะแนน 7 ด้าน แบบตรงไปตรงมา</p>
+    <p class="hook">🤫 แอบกระซิบ: <strong>เอา handle คู่แข่งมาตรวจก็ได้นะ</strong></p>
+  </header>
+
+  <!-- ═══════════ FORM ═══════════ -->
+  <section id="form-section" class="card">
+    <h2>เริ่มตรวจ ใช้เวลา 1 นาที</h2>
+    <form id="checkup-form" novalidate>
+
+      <label>ชื่อของคุณ <span class="req">*</span>
+        <input name="name" required maxlength="120" placeholder="เช่น คุณฝ้าย" autocomplete="name">
+      </label>
+
+      <label>ชื่อธุรกิจ / แบรนด์ <span class="req">*</span>
+        <input name="business_name" required maxlength="160" placeholder="เช่น Content Clinic">
+      </label>
+
+      <label>อยากขายให้ใคร <span class="req">*</span>
+        <input name="sell_to" required maxlength="300" placeholder="เช่น เจ้าของธุรกิจ SME ที่อยากทำคอนเทนต์เอง">
+      </label>
+
+      <label>ธุรกิจอยู่ในวงการไหน <span class="req">*</span>
+        <input name="industry" required maxlength="160" placeholder="เช่น คลินิกความงาม, ร้านอาหาร, การศึกษา">
+      </label>
+
+      <fieldset>
+        <legend>Social ของธุรกิจ (กรอกอย่างน้อย 1 ช่อง) <span class="req">*</span></legend>
+        <label>Instagram
+          <input name="ig_handle" maxlength="200" placeholder="@yourbusiness" autocapitalize="none">
+        </label>
+        <label>TikTok
+          <input name="tiktok_handle" maxlength="200" placeholder="@yourbusiness" autocapitalize="none">
+        </label>
+        <label>Facebook Page
+          <input name="fb_handle" maxlength="200" placeholder="ชื่อเพจ / ลิงก์เพจ" autocapitalize="none">
+        </label>
+      </fieldset>
+
+      <!-- the viral hook — deliberately loud -->
+      <div class="competitor-box">
+        <label>🔥 handle คู่แข่ง (แนะนำให้กรอก)
+          <input name="competitor_handle" maxlength="200" placeholder="@competitor — เดี๋ยวเราส่องให้" autocapitalize="none">
+        </label>
+        <p class="hint">อยากรู้ไหมว่าเขาทำอะไรได้ดีกว่าคุณ… เราวัดให้เห็นเป็นตัวเลข</p>
+      </div>
+
+      <fieldset>
+        <legend>รับผลตรวจทางไหน (กรอกอย่างน้อย 1 ช่อง) <span class="req">*</span></legend>
+        <label>อีเมล
+          <input name="email" type="email" maxlength="200" placeholder="you@business.com" autocomplete="email">
+        </label>
+        <label>LINE ID
+          <input name="line_id" maxlength="100" placeholder="@yourline" autocapitalize="none">
+        </label>
+      </fieldset>
+
+      <button type="submit" id="submit-btn">🩺 ตรวจสุขภาพคอนเทนต์ ฟรี</button>
+      <p id="form-error" class="error" hidden></p>
+      <p class="privacy">ข้อมูลใช้เพื่อวิเคราะห์และส่งผลตรวจให้คุณเท่านั้น</p>
+    </form>
+  </section>
+
+  <!-- ═══════════ LOADING ═══════════ -->
+  <section id="loading-section" class="card center" hidden>
+    <div class="pulse">🩺</div>
+    <h2 id="loading-msg">กำลังสแกนบัญชีของคุณ…</h2>
+    <p class="sub" id="loading-sub">ระบบกำลังดึงโพสต์ล่าสุด, engagement, และข้อมูลโปรไฟล์จริง</p>
+    <div class="loadbar"><div id="loadbar-fill"></div></div>
+  </section>
+
+  <!-- ═══════════ RESULTS (health printout) ═══════════ -->
+  <section id="result-section" hidden>
+    <div class="card printout">
+      <div class="printout-head">
+        <div>
+          <p class="report-label">ใบรายงานผลตรวจสุขภาพคอนเทนต์</p>
+          <h2 id="r-bizname"></h2>
+          <p class="report-date" id="r-date"></p>
+        </div>
+        <div class="overall">
+          <div class="overall-score" id="r-overall-score">–</div>
+          <div class="overall-label">คะแนนรวม /10</div>
+        </div>
+      </div>
+      <p id="r-quality-note" class="quality-note" hidden>⚠️ สแกนข้อมูลได้จำกัด — คะแนนนี้คือการประเมินขั้นต่ำจากข้อมูลที่มี</p>
+      <p id="r-summary" class="summary"></p>
+      <div id="r-aspects"></div>
+    </div>
+
+    <!-- soft CTA → ฿5k 1-1 Online Audit -->
+    <div class="card cta">
+      <h2>เห็นแล้วใช่ไหมว่ามีอะไรต้องแก้หลายจุด</h2>
+      <p>ผลตรวจบอกว่า "ตรงไหนผิดปกติ" — แต่ยังไม่ได้บอกว่า "ต้องแก้ยังไง และแก้อะไรก่อน"</p>
+      <p><strong>1-1 Online Audit (฿5,000)</strong> คือขั้นถัดไป:
+         เราเจาะผลตรวจนี้ไปกับคุณทีละหัวข้อ ชี้จุดที่เสียโอกาสมากที่สุด
+         และแนะทางแก้ที่เหมาะกับธุรกิจคุณจริง ๆ</p>
+      <a id="cta-btn" class="cta-btn" href="#" target="_blank" rel="noopener">คุยกับ Content Clinic เลย →</a>
+      <p class="hint center-text">ผลตรวจนี้ถูกส่งไปที่อีเมล/LINE ที่คุณกรอกไว้แล้ว</p>
+    </div>
+
+    <div class="card share">
+      <p>🤫 อยากรู้คะแนนของคู่แข่ง? <button id="again-btn" class="linklike">ตรวจอีกบัญชี</button></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Content Clinic — เราช่วยเจ้าของธุรกิจสื่อสารคุณค่าของธุรกิจให้คนเข้าใจและอยากซื้อ</p>
+  </footer>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
